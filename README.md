@@ -15,7 +15,9 @@ El código crea un detector de phishing desarrollado completamente en Python, si
 
 Cuando el usuario introduce una URL, el programa analiza diferentes características del enlace, como:
 
--Si utiliza HTTPS.-La longitud de la URL.
+-Si utiliza HTTPS.
+
+-La longitud de la URL.
 
 -La presencia del símbolo @.
 
