@@ -15,12 +15,19 @@ El código crea un detector de phishing desarrollado completamente en Python, si
 
 Cuando el usuario introduce una URL, el programa analiza diferentes características del enlace, como:
 -Si utiliza HTTPS.
+
 -La longitud de la URL.
+
 -La presencia del símbolo @.
+
 -Si utiliza una dirección IP en lugar de un dominio.
+
 -La cantidad de guiones.
+
 -La cantidad de subdominios.
+
 -La presencia de palabras sospechosas como login, verify, password, account, security o bank.
+
 -La cantidad de números que contiene la URL.
 
 Después del análisis, el programa asigna una puntuación de riesgo. Dependiendo de esa puntuación, clasifica el enlace como:
