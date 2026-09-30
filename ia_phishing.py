@@ -3,7 +3,6 @@ import re
 
 def analizar_url(url):
 
-    # Agregar http:// si el usuario no lo escribe
     if not url.startswith(("http://", "https://")):
         url = "http://" + url
 
@@ -12,10 +11,8 @@ def analizar_url(url):
     dominio = partes.netloc.lower()
     url_minuscula = url.lower()
 
-    # Puntuación de riesgo
     riesgo = 0
 
-    # Razones encontradas
     razones = []
 
     if partes.scheme != "https":
@@ -131,25 +128,24 @@ def analizar_url(url):
     if riesgo >= 7:
 
         nivel = "ALTO"
-        resultado = "POSIBLE PHISHING"
+        resultado = "⚠️ POSIBLE PHISHING"
 
     elif riesgo >= 4:
 
         nivel = "MEDIO"
-        resultado = "URL SOSPECHOSA"
+        resultado = "🟠 URL SOSPECHOSA"
 
     else:
 
         nivel = "BAJO"
-        resultado = "NO SE DETECTARON SEÑALES CLARAS"
+        resultado = "✅ NO SE DETECTARON SEÑALES CLARAS"
 
 
     return riesgo, nivel, resultado, razones
 
-
 print()
 print("==============================================")
-print("        DETECTOR DE PHISHING")
+print("       🛡️ DETECTOR DE PHISHING")
 print("==============================================")
 print()
 print("Sistema de análisis de URLs")
@@ -216,7 +212,7 @@ while True:
 
     if nivel == "ALTO":
 
-        print("RECOMENDACIÓN:")
+        print("🚨 RECOMENDACIÓN:")
         print(
             "No introduzcas contraseñas ni "
             "información personal."
@@ -224,7 +220,7 @@ while True:
 
     elif nivel == "MEDIO":
 
-        print("RECOMENDACIÓN:")
+        print("⚠️ RECOMENDACIÓN:")
         print(
             "Verifica cuidadosamente el sitio "
             "antes de introducir información."
@@ -232,7 +228,7 @@ while True:
 
     else:
 
-        print("RECOMENDACIÓN:")
+        print("💡 RECOMENDACIÓN:")
         print(
             "Aunque el riesgo sea bajo, "
             "mantén precaución al navegar."
