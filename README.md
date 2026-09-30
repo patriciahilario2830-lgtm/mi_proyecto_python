@@ -32,6 +32,9 @@ Cuando el usuario introduce una URL, el programa analiza diferentes característ
 -La cantidad de números que contiene la URL.
 
 Después del análisis, el programa asigna una puntuación de riesgo. Dependiendo de esa puntuación, clasifica el enlace como:
+
 Riesgo bajo: no se detectaron señales claras.
+
 Riesgo medio: URL sospechosa.
+
 Riesgo alto: posible phishing.
